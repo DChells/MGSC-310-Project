@@ -3,6 +3,8 @@ library(leaflet)
 library(htmltools)
 library(leafgl)
 library(sf)
+library(tidyverse)
+library("here")
 
 
 crashes <- read.csv(here("datasets", "US_Accidents_Dec20_updated.csv"))
@@ -22,7 +24,7 @@ ui <- fluidPage(
 )
 
 
-df = st_as_sf(crashes[0:1000,], coords = c("Start_Lng", "Start_Lat"), crs = 4326)
+df = st_as_sf(crashes[0:100,], coords = c("Start_Lng", "Start_Lat"), crs = 4326)
 
 server <- function(input, output, session) {
   
