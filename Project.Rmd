@@ -1,6 +1,6 @@
 ---
 title: "Final Project"
-author: "Derek Milani, Nasser Aljasser, Lisa Pham, Daniel Chelling"
+author: "Daniel Chelling"
 subtitle: MGSC 310 Project 
 output:
   html_document:
@@ -242,7 +242,7 @@ tree_plot
 ```
 ```{r}
 
-importance_matrix <- xgb.importance(xgb_train[2],model = xgb)
+importance_matrix <- xgb.importance(model = xgb)
 xgb.plot.importance(importance_matrix)
 
 
